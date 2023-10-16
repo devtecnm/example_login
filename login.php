@@ -13,11 +13,11 @@
         $clave = hash('sha512', $clave);
 
         $driver = 'pgsql';
-        $host = 'app-cfa38304-9db4-4d49-9f56-9e0bf9328d20-do-user-14633560-0.b.db.ondigitalocean.com';
-        $port = 25060;
-        $dbname = 'db' ;
-        $user =  'db';
-        $password = 'AVNS_TA0VT6EIUBdsgPjMiIb';
+        $host = getenv('host');
+        $port = getenv('port');
+        $dbname = getenv('dbname');
+        $user =   getenv('user');
+        $password = getenv('password');
         
         try{
             //$conexion = new PDO('mysql:host=localhost;dbname=login_tuto', 'josejaime', 'admin1234');
