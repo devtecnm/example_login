@@ -17,13 +17,22 @@
         $clave2 = hash('sha512', $clave2);
         
         $error = '';
+
+        $driver = 'pgsql';
+        $host = 'app-cfa38304-9db4-4d49-9f56-9e0bf9328d20-do-user-14633560-0.b.db.ondigitalocean.com';
+        $port = 25060;
+        $dbname = 'db' ;
+        $user =  'db';
+        $password = 'AVNS_TA0VT6EIUBdsgPjMiIb';
         
         if (empty($correo) or empty($usuario) or empty($clave) or empty($clave2)){
             
             $error .= '<i>Favor de rellenar todos los campos</i>';
         }else{
             try{
-                $conexion = new PDO('mysql:host=localhost;dbname=login_tuto', 'josejaime', 'admin1234');
+                //$conexion = new PDO('mysql:host=localhost;dbname=login_tuto', 'josejaime', 'admin1234');
+                $connection = new PDO("$driver:host=$host;port=$port;dbname=$dbname", $user, $password);
+ 
             }catch(PDOException $prueba_error){
                 echo "Error: " . $prueba_error->getMessage();
             }
