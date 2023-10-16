@@ -57,7 +57,7 @@
     </div>
 
     
-    <script src="js/jquery.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/jquery.js" type="application/javascript"></script>
+    <script src="js/script.js" type="application/javascript"></script>
 </body>
 </html>
