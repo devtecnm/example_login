@@ -54,7 +54,7 @@
         }
         
         if ($error == ''){
-            $statement = $conexion->prepare('INSERT INTO login  (id, correo, usuario, clave) VALUES (null, :correo, :usuario, :clave)');
+            $statement = $conexion->prepare('INSERT INTO login  ( correo, usuario, clave) VALUES ( :correo, :usuario, :clave)');
             $statement->execute(array(
                 
                 ':correo' => $correo,
