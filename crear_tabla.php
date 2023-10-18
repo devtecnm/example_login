@@ -11,6 +11,9 @@ try {
     // Conexión a la base de datos
     $conn = new PDO("pgsql:host=$host;port=$port;dbname=$dbname;user=$user;password=$password");
 
+    $sql = "DROP TABLE IF EXISTS login";
+    $conn->exec($sql);
+    
     // Consulta SQL para crear una tabla
     $sql = "CREATE TABLE IF NOT EXISTS login (
     id serial PRIMARY KEY,
