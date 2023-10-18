@@ -13,11 +13,10 @@ try {
 
     // Consulta SQL para crear una tabla
     $sql = "CREATE TABLE IF NOT EXISTS login (
-    id int(11) NOT NULL AUTO_INCREMENT,
+    id serial PRIMARY KEY,
     correo varchar(123) NOT NULL,
     usuario varchar(100) NOT NULL,
-    clave varchar(200) NOT NULL,
-    UNIQUE KEY id (id) )";
+    clave varchar(200) NOT NULL;
 
     // Ejecutar la consulta SQL
     $conn->exec($sql);
