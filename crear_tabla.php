@@ -16,7 +16,7 @@ try {
     id serial PRIMARY KEY,
     correo varchar(123) NOT NULL,
     usuario varchar(100) NOT NULL,
-    clave varchar(200) NOT NULL;
+    clave varchar(200) NOT NULL)";
 
     // Ejecutar la consulta SQL
     $conn->exec($sql);
